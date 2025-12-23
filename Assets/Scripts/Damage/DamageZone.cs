@@ -7,7 +7,16 @@ public class DamageZone : MonoBehaviour
     bool playerInZone = false;
     float damageInterval = 1.0f; // seconds
     float damageTimer = 0.0f;
+    private AudioManager audioManager;
 
+    void Start()
+    {
+        GameObject audioManagerObj = GameObject.FindWithTag("AudioManager");
+        if (audioManagerObj != null)
+        {
+            audioManager = audioManagerObj.GetComponent<AudioManager>();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision) // when enter, deal damage once
     {
@@ -55,6 +64,10 @@ public class DamageZone : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.addHealth(-damageAmount);
+            if (audioManager != null)
+            {
+                audioManager.PlayPlayerHitSound();
+            }
         }
     }
 }

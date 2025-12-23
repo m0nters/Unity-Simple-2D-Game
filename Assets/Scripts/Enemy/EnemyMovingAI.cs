@@ -22,6 +22,7 @@ public class EnemyMovingAI : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private AudioManager audioManager;
 
     private void Awake()
     {
@@ -39,6 +40,12 @@ public class EnemyMovingAI : MonoBehaviour
         {
             playerTransform = player.transform;
             playerHealth = player.GetComponent<PlayerHealth>();
+        }
+
+        GameObject audioManagerObj = GameObject.FindWithTag("AudioManager");
+        if (audioManagerObj != null)
+        {
+            audioManager = audioManagerObj.GetComponent<AudioManager>();
         }
     }
 
@@ -107,6 +114,10 @@ public class EnemyMovingAI : MonoBehaviour
 
     void TakeDamage(int amount)
     {
+        if (audioManager != null)
+        {
+            audioManager.PlayPlayerHitSound();
+        }
         if (playerHealth != null)
         {
             playerHealth.addHealth(-amount);

@@ -9,8 +9,10 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip backgroundMusicClip;
     public AudioClip shootClip;
-    public AudioClip hitClip;
+    public AudioClip bulletHitClip;
     public AudioClip enemyDeadClip;
+    public AudioClip healthPickupClip;
+    public AudioClip playerHitClip;
 
     void Start()
     {
@@ -33,11 +35,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayHitSound()
+    public void PlayBulletHitSound()
     {
-        if (SFXAudioSource != null && hitClip != null)
+        if (SFXAudioSource != null && bulletHitClip != null)
         {
-            SFXAudioSource.PlayOneShot(hitClip);
+            SFXAudioSource.PlayOneShot(bulletHitClip);
         }
     }
 
@@ -46,6 +48,22 @@ public class AudioManager : MonoBehaviour
         if (SFXAudioSource != null && enemyDeadClip != null)
         {
             SFXAudioSource.PlayOneShot(enemyDeadClip);
+        }
+    }
+
+    public void PlayHealthPickupSound()
+    {
+        if (SFXAudioSource != null && healthPickupClip != null)
+        {
+            SFXAudioSource.PlayOneShot(healthPickupClip);
+        }
+    }
+
+    public void PlayPlayerHitSound()
+    {
+        if (SFXAudioSource != null && playerHitClip != null)
+        {
+            SFXAudioSource.PlayOneShot(playerHitClip);
         }
     }
 

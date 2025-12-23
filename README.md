@@ -2,7 +2,7 @@
 
 A top-down 2D action game built with Unity where players survive against waves of enemies in a dynamic environment.
 
-Screenshots:
+## Screenshots:
 
 ![Gameplay Screenshot](Demo/gameplay.png)
 
@@ -13,7 +13,7 @@ Screenshots:
 - **Shooting System**: Player can shoot bullets to defeat enemies
 - **Health System**: Player health displayed in the HUD (heart icon with health counter)
 - **Movement**: Top-down character movement controls
-- **Camera Follow**: Camera automatically follows the player for smooth gameplay
+- **Camera Follow**: Camera automatically follows the player for smooth gameplay (implemented using Cinemachine)
 
 ### Enemy System
 
@@ -41,3 +41,12 @@ Screenshots:
 ## Gameplay
 
 Navigate through the environment, shoot enemies, collect gems, avoid damage zones, and survive as long as possible while racking up the highest score!
+
+## References
+
+I picked up assets from various free resources online, including:
+
+- [Kenney.nl](https://kenney.nl/assets)
+- [Itch.io](https://itch.io/game-assets/free/tag-top-down)
+- [OpenGameArt.org](https://opengameart.org/)
+- [Unity Asset Store](https://assetstore.unity.com/)

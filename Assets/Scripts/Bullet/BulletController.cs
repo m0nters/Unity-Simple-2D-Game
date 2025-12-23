@@ -52,7 +52,7 @@ public class BulletController : MonoBehaviour
     {
         if (audioManager != null)
         {
-            audioManager.PlayHitSound();
+            audioManager.PlayBulletHitSound();
         }
         Debug.Log("Bullet hit: " + collision.gameObject.name);
         rb.linearVelocity = Vector2.zero; // stop movement
