@@ -2,6 +2,10 @@
 
 A top-down 2D action game built with Unity where players survive against waves of enemies in a dynamic environment.
 
+Screenshots:
+
+![Gameplay Screenshot](Demo/gameplay.png)
+
 ## Features
 
 ### Player Mechanics
